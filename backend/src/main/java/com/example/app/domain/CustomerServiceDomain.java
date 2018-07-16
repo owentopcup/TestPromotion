@@ -75,7 +75,7 @@ public class CustomerServiceDomain {
             if (callTime <= 60) {
                 serviceCharge = new Double(promotionRate.get("FIRST_TIME"));
             } else {
-                serviceCharge = new Double((Math.floor(callTime / 60)) * promotionRate.get("SECOND_TIME"))+new Double(promotionRate.get("FIRST_TIME"));
+                serviceCharge = new Double((Math.floor((callTime-60 )/ 60)) * promotionRate.get("SECOND_TIME"))+new Double(promotionRate.get("FIRST_TIME"));
             }
         } catch (Exception e) {
             e.printStackTrace();
