@@ -2,9 +2,12 @@ package com.example.app;
 
 import java.lang.reflect.Method;
 
+import com.example.app.config.AppConfig;
+import com.example.app.service.CustomerService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -25,11 +28,11 @@ public class Application {
 
     @Value("${rest.api.base.path}")
     private String restApiBasePath;
-
     public static void main(String[] args) {
+
         SpringApplication.run(Application.class, args);
         logger.info("Started application....");
-    }
+     }
 
     @Bean
     public WebMvcConfigurer corsConfigurer() {

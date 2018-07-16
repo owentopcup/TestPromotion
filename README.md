@@ -62,3 +62,4 @@ Once the above command finishes, you can start the frontend using the `yarn star
 ## Hot reloading
 
 Both the frontend and backend support hot reloading.
+Finally Config File Path In application.properties and Run ApiTest Class in Test package
